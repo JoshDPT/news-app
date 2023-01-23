@@ -1,8 +1,9 @@
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import Link from 'next/link'; 
 import NavLinks from "./NavLinks";
+import SearchBox from "./SearchBox";
 
-function Header() {
+export default function Header() {
   return (
     <header>
       <div className="grid grid-cols-3 p-10 items-center ">
@@ -26,8 +27,7 @@ function Header() {
       {/* Navigation Links */}
       <NavLinks/>
       {/* Search Box */}
+      <SearchBox />
     </header>
   )
 }
-
-export default Header
