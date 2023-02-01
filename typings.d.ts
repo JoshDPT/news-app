@@ -4,6 +4,7 @@ type Article = {
   country: string;
   description: string;
   language: string;
+  image: string;
   published_at: string;
   source: string;
   title: string;

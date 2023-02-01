@@ -1,4 +1,5 @@
 import { gql } from "graphql-request";
+import sortNewsByImage from "./sortNewsByImage";
 
 export default async function fetchNews (
   category?: Category | string,
@@ -66,8 +67,10 @@ export default async function fetchNews (
   const newsResponse = await res.json();
   
   // sort images by images vs not images present
-
+  const news = sortNewsByImage(newsResponse.data.myQuery);
+  
   // return result
+  return news;
 }
 
 // stepzen import curl "http://api.mediastack.com/v1/news?access_key=36d37c800399dfe4debdb1b466846987&sources=bbc&categories=business"

@@ -1,12 +1,15 @@
 import { categories } from "../constants";
 import fetchNews from "../lib/fetchNews";
+import NewsList from "./NewsList";
 
 export default async function HomePage() {
   // fetch the news data 
   const news: NewsResponse = await fetchNews(categories.join(','));
+  console.log(news);
+
   return (
     <div>
-      {/* NewsList news */}
+      <NewsList news={news} />
     </div>
   )
 }
