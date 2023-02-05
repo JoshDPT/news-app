@@ -72,5 +72,3 @@ export default async function fetchNews (
   // return result
   return news;
 }
-
-// stepzen import curl "http://api.mediastack.com/v1/news?access_key=36d37c800399dfe4debdb1b466846987&sources=bbc&categories=business"

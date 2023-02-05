@@ -1,15 +1,17 @@
-import { categories } from "../constants";
-import fetchNews from "../lib/fetchNews";
-import NewsList from "./NewsList";
+import { categories } from '../constants';
+import fetchNews from '../lib/fetchNews';
+import NewsList from './NewsList';
+import response from '../response.json';
 
 export default async function HomePage() {
-  // fetch the news data 
-  const news: NewsResponse = await fetchNews(categories.join(','));
-  console.log(news);
+	// fetch the news data
+	const news: NewsResponse =
+		response || 
+    (await fetchNews(categories.join(',')));
 
-  return (
-    <div>
-      <NewsList news={news} />
-    </div>
-  )
+	return (
+		<div>
+			<NewsList news={news} />
+		</div>
+	);
 }
