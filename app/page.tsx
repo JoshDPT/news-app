@@ -9,6 +9,9 @@ export default async function HomePage() {
 		response || 
     (await fetchNews(categories.join(',')));
 
+	// set timeout for 3 seconds to show off loading screen
+	await new Promise(resolve => setTimeout(resolve, 1000))
+
 	return (
 		<div>
 			<NewsList news={news} />
