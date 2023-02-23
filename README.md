@@ -40,7 +40,7 @@ Conversion notes:
 
 
 
-* Dark / Light mode with Next themes
+* Dark / Light mode
 * Dynamic pages & routes
 * Responsive styling
 * Incremental static regeneration
